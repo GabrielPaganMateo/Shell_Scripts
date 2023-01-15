@@ -1,0 +1,8 @@
+#!/bin/bash
+#Script to run valgrind with maximum memory leak identification
+
+  # *Important* Must compile the executable file with '-g' option before using script
+
+#Example: FullPowerValgrind ./executable_file_name
+
+valgrind -s --leak-check=full --show-leak-kinds=all --track-origins=yes
