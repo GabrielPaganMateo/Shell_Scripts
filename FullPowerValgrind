@@ -1,8 +1,23 @@
 #!/bin/bash
-#Script to run valgrind with maximum memory leak identification
+#Script to run valgrind with maximum memory leak identification features
 
-  # *Important* Must compile the executable file with '-g' option before using script
+  # *Important*
+  # Include all features by compiling the executable file with '-g' option before using script
+  # Example: gcc -g file_name.c -o executable_file
 
-#Example: FullPowerValgrind ./executable_file_name
+exec valgrind -s --leak-check=full --show-leak-kinds=all --track-origins=yes ./executable_file
+                                                                #              ^^^^^^^^^^^^^^^
+                                                                # change "executable_file"
+                                                                # to the name of executable file
+                                                                # you wish to check
+# Options of use
 
-valgrind -s --leak-check=full --show-leak-kinds=all --track-origins=yes
+  # Option 1~ cp or mv the file 'FullPowerValgrind' into working directory, then type the following command:
+
+    # bash FullPowerValgrind
+
+  # Option 2~ copy & paste the following code directly into your command prompt:
+
+    # valgrind -s --leak-check=full --show-leak-kinds=all --track-origins=yes ./executable_file
+
+    # REMEMBER TO REPLACE "executable_file" WITH THE NAME OF YOUR OWN EXECUTABLE FILE
