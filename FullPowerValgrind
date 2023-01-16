@@ -12,11 +12,11 @@ exec valgrind -s --leak-check=full --show-leak-kinds=all --track-origins=yes ./e
                                                                 # you wish to check
 # Options of use
 
-  # Option 1~ cp or mv the file 'FullPowerValgrind' into working directory, then type the following command:
+  # Option 1 - cp the file 'FullPowerValgrind' into project directory, then type the following command:
 
     # bash FullPowerValgrind
 
-  # Option 2~ copy & paste the following code directly into your command prompt:
+  # Option 2 - copy & paste the following code directly into your command prompt:
 
     # valgrind -s --leak-check=full --show-leak-kinds=all --track-origins=yes ./executable_file
 
