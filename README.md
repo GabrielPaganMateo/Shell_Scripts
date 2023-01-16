@@ -1,1 +1,1 @@
-Repository for storage of linux shell scripts.
+Repository for storage of valgrind scripts.
